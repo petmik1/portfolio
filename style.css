@@ -67,5 +67,11 @@ ul > li > a {
 }
 
 .wrapper .sidebar ul li:hover {
-  background-color: #ceced8;
+  color: #ceced8;
+}
+.wrapper .sidebar div {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%z);
 }
