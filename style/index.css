@@ -1,0 +1,31 @@
+.secCarrusel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.carrusel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+.carruselContainer {
+    margin: 1em;
+    border: 1px solid gray;
+    background-color: lightgray;
+    padding: 1em;
+    height: 500px;
+}
+.selected {
+    width: 50%;
+}
