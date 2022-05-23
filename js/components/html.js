@@ -1,5 +1,6 @@
 // html for the blog specific page
-function createHtmlIndex(result, i, selected) {
+function createHtmlIndex(result, i, selected, resultMedia) {
+    console.log(resultMedia)
     carrusel.innerHTML += `
     <a href="#" class="carruselContainer ${selected}">
         <h1>${result[i].title.rendered}</h1>

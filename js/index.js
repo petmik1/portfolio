@@ -14,6 +14,10 @@ async function getBlog() {
         const result = await response.json();
         for (let i = 0; i < result.length; i++) {
             let id = result[i].id;
+            const mediaUrl = result[i]._links["wp:attachment"][0].href;
+            const responseMedia = await fetch(mediaUrl);
+            const resultMedia = await responseMedia.json();
+            
 
             // finding the middle ofthe fetched array. 
             let middle = result.length - 1;
@@ -27,30 +31,13 @@ async function getBlog() {
             } else {
                 selected = "notSelected";
             }
-            console.log(selected)
-            createHtmlIndex(result, i, selected);
+            createHtmlIndex(result, i, selected, resultMedia);
         }
-        // for (let i = 0; i < result.length; i++) {
-        //     let id = result[i].id;
-        //     const mediaUrl = result[i]._links["wp:attachment"][0].href;
-        //     const responseMedia = await fetch(mediaUrl);
-        //     const resultMedia = await responseMedia.json();
+ 
+            // const mediaUrl = result[i]._links["wp:attachment"][0].href;
+            // const responseMedia = await fetch(mediaUrl);
+            // const resultMedia = await responseMedia.json();
 
-        // // finding the middle ofthe fetched array. 
-        // let arrayLength = result.length - 1;
-        // arrayLength = arrayLength / 2;
-        // arrayLength = Math.round(arrayLength);
-
-        // // assigning the selected class to the middle eliment
-        // let selected;
-        // if (i === arrayLength) {
-        //     selected = "selected";
-        // } else {
-        //     selected = "notSelected";
-        // }
-        //     // creating the HTML
-        //     createHtmlIndex(result, resultMedia, i, selected);
-        // }
     } catch (error) {
         console.log("failed to load", error);
         carrusel.innerHTML = "There appers to be a problem, please try again"
