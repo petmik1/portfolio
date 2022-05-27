@@ -2,22 +2,12 @@
 function createHtmlIndex(result, i, selected, resultMedia) {
     console.log(resultMedia)
     carrusel.innerHTML += `
-    <a href="#" class="carruselContainer ${selected}">
+    <a href="pages/blog-spesific.html?id=${result[i].id}" class="carruselContainer ${selected}">
         <h1>${result[i].title.rendered}</h1>
+        <img src="${resultMedia[0].source_url}" class="carruselImage" alt="">
         <p>${result[i].excerpt.rendered}</p>
+        
     </a>
-    
-
     `
-    // carrusel.innerHTML += `
-    //         <div class="figure ${selected}">
-    //             <a href="pages/blog-spesific.html?id=${result[i].id}">
-    //                 <div class="bloginfo">
-    //                     <img src="${resultMedia[0].source_url}" alt="${resultMedia[i].alt_text}">
-    //                 </div>
-    //                 <p>${result[i].title.rendered}</p>
-    //             </a>
-    //         </div>
-    //         `;
-    // dotSection.innerHTML += `<div class="dot ${selected}Dot"></div>`;
+    dotSection.innerHTML += `<div class="dot ${selected}Dot"></div>`;
 }

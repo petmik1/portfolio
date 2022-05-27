@@ -5,6 +5,7 @@ const leftBtn = document.querySelector(".leftBtn");
 const dotSection = document.querySelector(".dotSection");
 
 
+
 // using the try/catch metod to fetch information from WP API
 async function getBlog() {
 
@@ -34,13 +35,75 @@ async function getBlog() {
             createHtmlIndex(result, i, selected, resultMedia);
         }
  
-            // const mediaUrl = result[i]._links["wp:attachment"][0].href;
-            // const responseMedia = await fetch(mediaUrl);
-            // const resultMedia = await responseMedia.json();
-
     } catch (error) {
         console.log("failed to load", error);
         carrusel.innerHTML = "There appers to be a problem, please try again"
     }
 }
 getBlog();
+
+
+// makes the carrusel go rigth
+rightBtn.addEventListener("keydown", right)
+rightBtn.addEventListener("click", right)
+
+function right(e) {
+  let active = document.querySelector(".selected");
+  let nextSibling = active.nextElementSibling;
+  let activeDot = document.querySelector(".selectedDot");
+  let nextSiblingDot = activeDot.nextElementSibling;
+
+  // checks if the "next item is first item"
+  if (nextSibling === null) {
+    nextSibling = active.parentElement.firstElementChild;
+    nextSiblingDot = activeDot.parentElement.firstElementChild;
+  } else {
+    nextSibling = active.nextElementSibling;
+    nextSiblingDot = activeDot.nextElementSibling;
+  }
+
+  // adds and removes classes form blog conteiner
+  active.classList.toggle("selected");
+  active.classList.toggle("notSelected");
+  nextSibling.classList.toggle("notSelected");
+  nextSibling.classList.toggle("selected");
+
+  // adds and removes classes form dots
+  activeDot.classList.toggle("selectedDot");
+  activeDot.classList.toggle("notSelectedDot");
+  nextSiblingDot.classList.toggle("notSelectedDot");
+  nextSiblingDot.classList.toggle("selectedDot");
+}
+
+// makes the carrusel go left
+leftBtn.addEventListener("keydown", left)
+leftBtn.addEventListener("click", left)
+
+function left(e) {
+  let active = document.querySelector(".selected");
+  let previusSibling = active.previousElementSibling;
+
+  let activeDot = document.querySelector(".selectedDot");
+  let previusSiblingDot = activeDot.previousElementSibling;
+
+  // checks if the "next" item is the last item
+  if (previusSibling === null) {
+    previusSibling = active.parentElement.lastElementChild;
+    previusSiblingDot = activeDot.parentElement.lastElementChild;
+  } else {
+    nextSibling = active.nextElementSibling;
+    nextSibling = activeDot.nextElementSibling;
+  }
+
+  // adds and removes classes form blog conteiner
+  active.classList.toggle("selected");
+  active.classList.toggle("notSelected");
+  previusSibling.classList.toggle("notSelected");
+  previusSibling.classList.toggle("selected");
+
+  // adds and removes classes form dots
+  activeDot.classList.toggle("selectedDot");
+  activeDot.classList.toggle("notSelectedDot");
+  previusSiblingDot.classList.toggle("notSelectedDot");
+  previusSiblingDot.classList.toggle("selectedDot");
+};

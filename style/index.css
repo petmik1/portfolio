@@ -4,31 +4,32 @@
     justify-content: center;
     align-items: center;
 }
-
 .Carrusel {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1000px;
 }
-
 .carrusel {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 1em;
-    flex:10;
+    flex: 10;
 }
 .carruselContainer {
     border: 1px solid gray;
     background-color: lightgray;
-    height: 500px;
     margin: 1em;
     padding: 1em;
-    
-
-    
+    transition: 0.3s ease-out;
+    min-height: 400px;
+}
+.notSelected {
+    width: 50%;
+    opacity: 0.6;
+    overflow: hidden;
 }
 .selected {
     width: 100%;
@@ -39,4 +40,23 @@
     justify-content: center;
     align-items: center;
     font-size: 3em;
+}
+.dotSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 3px solid black;
+    margin: 10px;
+    border-radius: 100%;
+    transition: 0.5s ease-out;
+}
+.selectedDot {
+    background-color: black;
+}
+.carruselImage {
+    width: 100%;
 }
