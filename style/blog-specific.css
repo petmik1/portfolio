@@ -15,3 +15,6 @@
     font-size: 1.2em;
     line-height: 2em;
 }
+.content h2 {
+    text-transform: uppercase;
+}

@@ -1,5 +1,3 @@
-const params = new URLSearchParams(document.location.search);
-const id = parseInt(params.get("id"));
 const url = "https://portfolio.petter-mikalsen.no/wp-json/wp/v2/posts?per_page=100&_embed";
 const content = document.querySelector(".content")
 // using the try/catch metod to fetch information from WP API
@@ -8,11 +6,9 @@ async function getBlog() {
         const response = await fetch(url);
         const result = await response.json();
        
-        for (let i = 0; i < result.length; i++) {
-             
-            const mediaUrl = result[i]._links["wp:attachment"][0].href;
+        for (let i = 0; i < result.length; i++) {m
             if (result[i].id === id) {
-                createHtmlBlogSpecific(result, mediaUrl, i);
+                wdda
             }
         }
     } catch (error) {

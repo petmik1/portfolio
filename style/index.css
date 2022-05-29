@@ -24,7 +24,8 @@
     margin: 1em;
     padding: 1em;
     transition: 0.3s ease-out;
-    min-height: 400px;
+    height: 400px;
+    color: black;
 }
 .notSelected {
     width: 50%;

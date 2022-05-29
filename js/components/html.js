@@ -12,9 +12,9 @@ function createHtmlIndex(result, i, selected, resultMedia) {
     dotSection.innerHTML += `<div class="dot ${selected}Dot"></div>`;
 }
 // html for the blog specific page
-function createHtmlBlogSpecific  (result, i) {
-    console.log(result[i].title)
-    content.innerHTML = `<h2>${result[i].title.rendered}</h2>
-    <div class="figure">${result[i].content.rendered}</div>`
-    
+function createHtmlBlogSpecific  (result, mediaUrl, i) {
+    content.innerHTML = `
+    <h2>${result[i].title.rendered}</h2>
+    <div class="figure">${result[i].content.rendered}</div>
+    `
 }
