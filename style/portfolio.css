@@ -1,0 +1,26 @@
+ .content{
+    max-width: 800px;
+    margin: 2em auto;
+}
+.content img {
+    width: 200px;
+    height: inherit;
+}
+.figure{
+    display: flex;
+}
+
+.portfolioCard {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+.portfolioCard *{
+    padding: 0.1em;
+}
+.portfolioCardLink {
+    color: black;
+}
+h2 {
+    text-transform: uppercase;
+}

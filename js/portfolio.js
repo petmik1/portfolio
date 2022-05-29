@@ -6,10 +6,8 @@ async function getBlog() {
         const response = await fetch(url);
         const result = await response.json();
        
-        for (let i = 0; i < result.length; i++) {m
-            if (result[i].id === id) {
-                wdda
-            }
+        for (let i = 0; i < result.length; i++) {
+            createHtmlPortfolio(result, i)
         }
     } catch (error) {
         console.log("failed to load", error);
