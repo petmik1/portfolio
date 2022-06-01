@@ -79,3 +79,6 @@ ul > li > a {
   font-size: 20px;
   padding: 2px;
 }
+.navigation{
+  display: flex;
+}
