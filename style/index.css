@@ -36,7 +36,7 @@
 }
 .carruselBtn {
     flex: 1;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3em;
@@ -60,4 +60,7 @@
 .carruselImage {
     width: 100%;
     height: 70%;
+}
+.carrusel i {
+    background-color: aqua;
 }
