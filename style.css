@@ -50,22 +50,9 @@ body {
   border-bottom: 1px solid #e0e4e8;
 }
 
-.info {
-  margin: 20px;
-  background-color: #ffffff;
-  color: #717171;
-  font-family: "Oswald", sans-serif;
-  line-height: 25px;
-  margin-right: 500px;
-}
 
-#img_portrett {
-  width: 20%;
-  position: fixed;
-  right: 50px;
-  border-radius: 50%;
-  padding: 10px;
-}
+
+
 
 .fas, .fa-brands{
   color: #717171;

@@ -1,0 +1,18 @@
+#img_portrett {
+    width:300px;
+    float: right;
+    border-radius: 50%;
+    margin: 0 2em;
+  }
+  .info {
+    margin: 20px;
+    background-color: #ffffff;
+    color: #717171;
+    font-family: "Oswald", sans-serif;
+    line-height: 25px;
+
+}
+
+header {
+    margin: 0 0 1em;
+}
