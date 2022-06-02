@@ -1,10 +1,41 @@
 @media(max-width: 700px){
-.toggle {
-    display: none
+.sidebar{
+    display: none;
 }
 .hamburger{
     display: block;
-}.notSelected{
+}
+.notSelected{
     display: none;
+}
+.secCarrusel{
+    margin: 0;
+}
+.toggle{
+    display: flex;
+}
+.sidebar > div:nth-child(1) {
+    flex-direction: column;
+   } 
+.wrapper .sidebar ul {
+    flex-direction: column;
+    padding: 0;
+}
+/* portfolio */
+.figure{
+    flex-direction: column;
+}
+/* about */
+#img_portrett{
+    border-radius: 0;
+    width: 90%;
+}
+.aboutContent{
+    display: flex;
+    flex-direction: column;
+}
+.wp-block-image img{
+    width: 100%;
+    
 }
 }

@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
 body {
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
+  margin: 0;
+}
+h1{
+  color: #717171;
 }
 header {
   display: flex;
@@ -10,26 +15,24 @@ header {
   justify-content: center;
 
 }
+
 * {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
 
-
 .sidebar {
-  float: left;
   display: flex;
-  flex-direction: column;
   background-color: #000000d6;
-  padding: 30px 2em;
-  height: 100%;
-  position: fixed;
+  justify-content: space-around;
+  padding: 0;
 }
-.sidebar > ul {
-  padding-left: 0px;
- }
- 
+
+.sidebar>div:nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+}
 
 .wrapper .sidebar h2 {
   color: #ffffff;
@@ -38,11 +41,15 @@ header {
   margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li {
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.wrapper .sidebar ul {
   font-family: "Oswald", sans-serif;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper .sidebar ul * {
+  margin: 1em;
 }
 
 .sosial_media {
@@ -55,29 +62,28 @@ header {
   padding: 20px;
   background-color: #ffffff;
   color: #717171;
-  border-bottom: 1px solid #e0e4e8;
 }
 
 
-.fas, .fa-brands{
-  color: #717171;
+.fas,
+.fa-brands {
+  color: #a4a4a4;
   margin-right: 10px;
 }
 
-ul > li > a {
-  color: #717171;
+ul>li>a {
+  color: #a4a4a4;
 }
 
 .wrapper .sidebar ul li:hover {
   background-color: #ceced8;
 }
+
 .main_content {
   margin: 0 auto;
   max-width: 1200px;
 }
-header * {
-  flex-basis: ;
-}
+
 .hamburger {
   display: none;
 }
