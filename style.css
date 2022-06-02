@@ -16,10 +16,7 @@ header {
   text-decoration: none;
 }
 
-.wrapper {
-  display: flex;
-  position: relative;
-}
+
 .sidebar {
   float: left;
   display: flex;
@@ -80,4 +77,7 @@ ul > li > a {
 }
 header * {
   flex-basis: ;
+}
+.hamburger {
+  display: none;
 }

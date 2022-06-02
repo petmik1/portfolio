@@ -2,4 +2,9 @@
 .toggle {
     display: none
 }
+.hamburger{
+    display: block;
+}.notSelected{
+    display: none;
+}
 }
