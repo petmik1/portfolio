@@ -6,14 +6,27 @@ body {
   width: 100vw;
   margin: 0;
 }
-h1{
-  color: #717171;
+
+h1 {
+  color: #a4a4a4;
+
 }
+
+.mainHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: #000000d6;
+  padding: 20px;
+}
 
+.hamburger i {
+  color: #a4a4a4;
 }
 
 * {
@@ -57,13 +70,6 @@ header {
   align-items: center;
   justify-content: center;
 }
-
-#header {
-  padding: 20px;
-  background-color: #ffffff;
-  color: #717171;
-}
-
 
 .fas,
 .fa-brands {
